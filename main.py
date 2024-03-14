@@ -1,31 +1,31 @@
-# Реалізуйте клас «Людина». Збережіть у класі: ПІБ,
-# дату народження, контактний телефон, місто, країну,
-# домашню адресу. Реалізуйте методи класу для введення-виведення даних та інших операцій.
+# Створіть клас «Місто». Збережіть у класі: назву міста,
+# назву регіону, назву країни, кількість жителів у місті,
+# поштовий індекс міста, телефонний код міста. Реалізуйте
+# методи класу для введення-виведення даних та інших
+# операцій.
 
-class Person():
-    def __init__(self, name, birth, phone, city, state, adress):
+class City():
+    def __init__(self, name, region, state, population, phone_code):
         self.name = name
-        self.birth = birth
-        self.phone = phone
-
-        self.city = city
+        self.region = region
         self.state = state
-        self.adress = adress
+        self.population = population
+        self.phone_code = phone_code
     def info_output(self):
-        print(f"Person {self.name} was born in {self.birth} has phone number: {self.phone}. Currently lives in {self.city} in {self.state} with following adress: {self.adress} ")
+        print(f"City {self.name} located in region of {self.region} in {self.state}. Current population is: {self.population} and phone code is:'{self.phone_code}' ")
     def info_input(self):
-        self.name = input("Input name: ")
-        self.birth = input("Input birth date: ")
-        self.phone = input("Input phone number: ")
+        self.name = input("Input city name: ")
+        self.region = input("Input region name: ")
+        self.state = input("Input name of the state: ")
 
-        self.city = input("Input home city: ")
-        self.state = input("Input home state: ")
-        self.adress = input("Input home adress: ")
+        self.population = input("Input number of population: ")
+        self.phone_code = input("Input phone code: ")
 
-        print(f"Person {self.name} was born in {self.birth} has phone number: {self.phone}. Currently lives in {self.city} in {self.state} with following adress: {self.adress} ")
+        print(
+            f"City {self.name} located in region of {self.region} in {self.state}. Current population is  {self.population} and phone code is  {self.phone_code}")
 
 
 
-person = Person("A", "20.02.2002", "0392092", "London", "UK", "Greenroad-2" )
-person.info_input()
+city = City("Kyiv", "North", "Ukraine", "2.5M", "+380")
+city.info_output()
 
